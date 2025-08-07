@@ -450,6 +450,16 @@ section {
   .home .content .title {
     font-size: 3.5rem;
   }
+  .banner .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+  }
+  .work .work-con .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+  }
 }
 @media (max-width: 450px) {
   html {
@@ -457,6 +467,21 @@ section {
   }
   .home .content .title {
     font-size: 3rem;
+  }
+}
+@media (max-width: 300px) {
+  html {
+    font-size: 45%;
+  }
+  .banner .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+  }
+  .work .work-con .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
   }
 }
 /*/Media Queries*//*# sourceMappingURL=style.css.map */
