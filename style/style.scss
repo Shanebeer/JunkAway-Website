@@ -1,0 +1,537 @@
+$sec: #d4af37;
+$sec2: #00a651;
+$light: #33b873;
+$black: #52452d;
+$black2: #335046;
+$white: #fffbef;
+$white2: #f0faf4;
+$gray: #717c7d;
+$back: linear-gradient(to right, $sec, #ffd700, $sec);
+
+/*Common Elements*/
+
+@font-face {
+  font-family: font;
+  src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: hfont;
+  src: url("/fonts/Lilita_One/LilitaOne-Regular.ttf");
+}
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 1.5rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+  font-family: font;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style-type: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1.3rem 3rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: $back;
+  color: $white;
+
+  &:hover {
+    background: $black;
+    transition: 0.2s ease-in-out;
+  }
+}
+
+.heading {
+  font-size: 7rem;
+  text-align: center;
+  position: relative;
+  padding: 7rem;
+  color: $black;
+  span {
+    background: $back;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -ms-text-fill-color: transparent; /* For IE */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+
+    @supports (-webkit-text-fill-color: transparent) and (background-clip: text) {
+      font-size: 7rem;
+    }
+  }
+}
+
+.nocap {
+  text-transform: none;
+}
+
+/*/Common Elements*/
+
+/*WhatsApp Icon*/
+.whatsapp {
+  #icon {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 0.3rem solid #ffffff;
+    display: inline-block;
+    background: transparent;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+}
+
+.whatsapp #icon:hover {
+  transform: translateY(-0.5rem);
+}
+/*/WhatsApp Icon*/
+/*Header Section*/
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  z-index: 1000;
+
+  .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $black;
+
+    span {
+      color: $sec;
+      font-weight: bolder;
+    }
+
+    #icon {
+      padding-right: 0.5rem;
+      font-size: 2.5rem;
+      color: $sec;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: $gray;
+    }
+  }
+
+  .navbar {
+    a {
+      font-size: 1.5rem;
+      color: $black;
+      margin: 0 0.7rem;
+
+      &:hover {
+        color: $white;
+        padding: 3.6rem 1rem;
+        background: $back;
+      }
+    }
+  }
+
+  .menu-btn {
+    font-size: 4rem;
+    color: $black;
+    cursor: pointer;
+    display: none;
+  }
+}
+/*/Header Section*/
+/*Home Section*/
+.home {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("/assets/junkaway-homebg1.png") no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  .content {
+    text-align: center;
+    .title {
+      font-size: 5rem;
+      padding: 2rem 0;
+      color: $black;
+    }
+  }
+}
+
+/*/Home Section*/
+
+/*Banner Section*/
+.banner {
+  margin-top: 6rem;
+  .images {
+    @include grid(50rem);
+
+    .title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+      color: $black;
+      margin-bottom: 3rem;
+    }
+
+    img {
+      width: 100%;
+      height: 25rem;
+      object-fit: cover;
+      border: 0.1rem solid $black;
+    }
+  }
+}
+/*/Banner Section*/
+
+/*About Us Section*/
+.about {
+  .title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: $black;
+    margin-bottom: 3rem;
+  }
+  .choose-us {
+    .box-con {
+      @include grid(25rem);
+
+      .box {
+        padding: 2rem;
+        border-radius: 0.5rem;
+        background: $white;
+        text-align: center;
+        overflow: hidden;
+
+        #icon {
+          font-size: 4rem;
+          color: $sec;
+          margin: 2rem 0;
+        }
+
+        h3 {
+          font-size: 2rem;
+          color: $black;
+        }
+
+        p {
+          font-size: 1.6rem;
+          color: $gray;
+          line-height: 2;
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+  .mission {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 6rem 0;
+
+    .image {
+      flex: 1 1 40rem;
+      width: 40rem;
+      height: 40rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      flex: 1 1 40rem;
+
+      h3 {
+        font-size: 2.5rem;
+        color: $black;
+      }
+
+      p {
+        font-size: 1.6rem;
+        color: $gray;
+        line-height: 2;
+        padding: 1rem 0;
+      }
+    }
+  }
+  .areas {
+    margin: 6rem 0;
+    .box-con {
+      @include grid(20rem);
+      .box {
+        background: $white;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        border: 0.1rem solid $black;
+        text-align: center;
+
+        img {
+          width: 100%;
+          height: 10rem;
+          object-fit: cover;
+        }
+
+        h3 {
+          font-size: 1.7rem;
+          color: $black;
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+}
+/*/About Us Section*/
+
+/*Work Section*/
+.work {
+  .work-con {
+    .title {
+      text-align: center;
+      font-size: 4rem;
+      font-weight: bold;
+      color: $black;
+      margin-bottom: 4rem;
+    }
+
+    .images {
+      @include grid(50rem);
+      img {
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+        border: 0.1rem solid $black;
+      }
+    }
+  }
+}
+/*/Work Section*/
+
+/*Contact Us Section*/
+.contact {
+  .icons-con {
+    @include grid(29rem);
+    .icons {
+      text-align: center;
+      padding: 2rem;
+      border: solid 0.2rem $sec;
+
+      .icon {
+        height: 6rem;
+        width: 6rem;
+        line-height: 7rem;
+        background-color: $sec;
+        border-radius: 50%;
+        margin: 0 auto;
+
+        #icon {
+          font-size: 2.5rem;
+          color: $white;
+        }
+      }
+
+      h3 {
+        font-size: 2rem;
+        color: $black;
+        padding: 1rem 0;
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: $gray;
+        line-height: 2;
+      }
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+
+    .map {
+      height: 30rem;
+      width: 100%;
+    }
+  }
+}
+/*/Contact Us Section*/
+
+.footer {
+  background-color: $black;
+  position: relative;
+  .box-con {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .box {
+      flex: 1 1 25rem;
+      margin: 2rem;
+
+      &:nth-child(2) {
+        text-align: center;
+      }
+
+      &:nth-child(2) a {
+        display: block;
+        font-size: 2rem;
+        padding: 0.4rem 0;
+        color: $white;
+      }
+
+      &:nth-child(2) a:hover {
+        text-decoration: underline;
+      }
+
+      .logo {
+        font-size: 2.5rem;
+        color: $sec;
+        font-weight: bolder;
+      }
+
+      #icon {
+        color: $sec;
+      }
+
+      h3 {
+        font-size: 2.5rem;
+        color: $sec;
+      }
+
+      p {
+        font-size: 1.7rem;
+        color: $white;
+        padding: 1rem 0;
+      }
+    }
+  }
+  .credit {
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+    padding: 1.4rem 0;
+    border-top: solid 0.2rem $white;
+    color: $white;
+    font-size: 2rem;
+
+    span {
+      color: $sec;
+      font-weight: bold;
+      font-size: 2.1rem;
+    }
+  }
+}
+
+/*/Footer Section*/
+
+/*Media Queries*/
+@media (max-width: 768px) {
+  html {
+    font-size: 52.5%;
+  }
+  .heading {
+    font-size: 5rem;
+    span {
+      font-size: 5rem;
+    }
+  }
+
+  .header {
+    .navbar {
+      border-top: solid 0.15rem $black;
+      position: absolute;
+      top: 8.75rem;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background: $white;
+
+      a {
+        width: 100%;
+        height: 7rem;
+        line-height: 7rem;
+        margin: 0;
+        padding: 0 1rem;
+        &:hover {
+          color: $white;
+          background-color: $back;
+          padding: 0 2rem;
+          border: solid 0.1rem $gray;
+        }
+      }
+    }
+    .menu-btn {
+      display: block;
+    }
+  }
+
+  .home {
+    .content {
+      .title {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .home {
+    .content {
+      .title {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+/*/Media Queries*/

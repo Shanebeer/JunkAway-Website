@@ -1,0 +1,462 @@
+/*Common Elements*/
+@font-face {
+  font-family: font;
+  src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: hfont;
+  src: url("/fonts/Lilita_One/LilitaOne-Regular.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+  font-family: font;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style-type: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1.3rem 3rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
+  color: #fffbef;
+}
+.btn:hover {
+  background: #52452d;
+  transition: 0.2s ease-in-out;
+}
+
+.heading {
+  font-size: 7rem;
+  text-align: center;
+  position: relative;
+  padding: 7rem;
+  color: #52452d;
+}
+.heading span {
+  background: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent; /* For IE */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
+@supports (-webkit-text-fill-color: transparent) and (background-clip: text) {
+  .heading span {
+    font-size: 7rem;
+  }
+}
+
+.nocap {
+  text-transform: none;
+}
+
+/*/Common Elements*/
+/*WhatsApp Icon*/
+.whatsapp #icon {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: 0.3rem solid #ffffff;
+  display: inline-block;
+  background: transparent;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp #icon:hover {
+  transform: translateY(-0.5rem);
+}
+
+/*/WhatsApp Icon*/
+/*Header Section*/
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fffbef;
+  z-index: 1000;
+}
+.header .logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #52452d;
+}
+.header .logo span {
+  color: #d4af37;
+  font-weight: bolder;
+}
+.header .logo #icon {
+  padding-right: 0.5rem;
+  font-size: 2.5rem;
+  color: #d4af37;
+}
+.header .logo p {
+  font-size: 1.5rem;
+  color: #717c7d;
+}
+.header .navbar a {
+  font-size: 1.5rem;
+  color: #52452d;
+  margin: 0 0.7rem;
+}
+.header .navbar a:hover {
+  color: #fffbef;
+  padding: 3.6rem 1rem;
+  background: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
+}
+.header .menu-btn {
+  font-size: 4rem;
+  color: #52452d;
+  cursor: pointer;
+  display: none;
+}
+
+/*/Header Section*/
+/*Home Section*/
+.home {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("/assets/junkaway-homebg1.png") no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.home .content {
+  text-align: center;
+}
+.home .content .title {
+  font-size: 5rem;
+  padding: 2rem 0;
+  color: #52452d;
+}
+
+/*/Home Section*/
+/*Banner Section*/
+.banner {
+  margin-top: 6rem;
+}
+.banner .images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  gap: 1.5rem;
+}
+.banner .images .title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #52452d;
+  margin-bottom: 3rem;
+}
+.banner .images img {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  border: 0.1rem solid #52452d;
+}
+
+/*/Banner Section*/
+/*About Us Section*/
+.about .title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #52452d;
+  margin-bottom: 3rem;
+}
+.about .choose-us .box-con {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+.about .choose-us .box-con .box {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background: #fffbef;
+  text-align: center;
+  overflow: hidden;
+}
+.about .choose-us .box-con .box #icon {
+  font-size: 4rem;
+  color: #d4af37;
+  margin: 2rem 0;
+}
+.about .choose-us .box-con .box h3 {
+  font-size: 2rem;
+  color: #52452d;
+}
+.about .choose-us .box-con .box p {
+  font-size: 1.6rem;
+  color: #717c7d;
+  line-height: 2;
+  padding: 1rem 0;
+}
+.about .mission {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 6rem 0;
+}
+.about .mission .image {
+  flex: 1 1 40rem;
+  width: 40rem;
+  height: 40rem;
+}
+.about .mission .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about .mission .content {
+  flex: 1 1 40rem;
+}
+.about .mission .content h3 {
+  font-size: 2.5rem;
+  color: #52452d;
+}
+.about .mission .content p {
+  font-size: 1.6rem;
+  color: #717c7d;
+  line-height: 2;
+  padding: 1rem 0;
+}
+.about .areas {
+  margin: 6rem 0;
+}
+.about .areas .box-con {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+}
+.about .areas .box-con .box {
+  background: #fffbef;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #52452d;
+  text-align: center;
+}
+.about .areas .box-con .box img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+.about .areas .box-con .box h3 {
+  font-size: 1.7rem;
+  color: #52452d;
+  padding: 1rem 0;
+}
+
+/*/About Us Section*/
+/*Work Section*/
+.work .work-con .title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #52452d;
+  margin-bottom: 4rem;
+}
+.work .work-con .images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  gap: 1.5rem;
+}
+.work .work-con .images img {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  border: 0.1rem solid #52452d;
+}
+
+/*/Work Section*/
+/*Contact Us Section*/
+.contact .icons-con {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  gap: 1.5rem;
+}
+.contact .icons-con .icons {
+  text-align: center;
+  padding: 2rem;
+  border: solid 0.2rem #d4af37;
+}
+.contact .icons-con .icons .icon {
+  height: 6rem;
+  width: 6rem;
+  line-height: 7rem;
+  background-color: #d4af37;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.contact .icons-con .icons .icon #icon {
+  font-size: 2.5rem;
+  color: #fffbef;
+}
+.contact .icons-con .icons h3 {
+  font-size: 2rem;
+  color: #52452d;
+  padding: 1rem 0;
+}
+.contact .icons-con .icons p {
+  font-size: 1.5rem;
+  color: #717c7d;
+  line-height: 2;
+}
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.contact .row .map {
+  height: 30rem;
+  width: 100%;
+}
+
+/*/Contact Us Section*/
+.footer {
+  background-color: #52452d;
+  position: relative;
+}
+.footer .box-con {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer .box-con .box {
+  flex: 1 1 25rem;
+  margin: 2rem;
+}
+.footer .box-con .box:nth-child(2) {
+  text-align: center;
+}
+.footer .box-con .box:nth-child(2) a {
+  display: block;
+  font-size: 2rem;
+  padding: 0.4rem 0;
+  color: #fffbef;
+}
+.footer .box-con .box:nth-child(2) a:hover {
+  text-decoration: underline;
+}
+.footer .box-con .box .logo {
+  font-size: 2.5rem;
+  color: #d4af37;
+  font-weight: bolder;
+}
+.footer .box-con .box #icon {
+  color: #d4af37;
+}
+.footer .box-con .box h3 {
+  font-size: 2.5rem;
+  color: #d4af37;
+}
+.footer .box-con .box p {
+  font-size: 1.7rem;
+  color: #fffbef;
+  padding: 1rem 0;
+}
+.footer .credit {
+  text-align: center;
+  width: 85%;
+  margin: 0 auto;
+  padding: 1.4rem 0;
+  border-top: solid 0.2rem #fffbef;
+  color: #fffbef;
+  font-size: 2rem;
+}
+.footer .credit span {
+  color: #d4af37;
+  font-weight: bold;
+  font-size: 2.1rem;
+}
+
+/*/Footer Section*/
+/*Media Queries*/
+@media (max-width: 768px) {
+  html {
+    font-size: 52.5%;
+  }
+  .heading {
+    font-size: 5rem;
+  }
+  .heading span {
+    font-size: 5rem;
+  }
+  .header .navbar {
+    border-top: solid 0.15rem #52452d;
+    position: absolute;
+    top: 8.75rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #fffbef;
+  }
+  .header .navbar a {
+    width: 100%;
+    height: 7rem;
+    line-height: 7rem;
+    margin: 0;
+    padding: 0 1rem;
+  }
+  .header .navbar a:hover {
+    color: #fffbef;
+    background-color: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
+    padding: 0 2rem;
+    border: solid 0.1rem #717c7d;
+  }
+  .header .menu-btn {
+    display: block;
+  }
+  .home .content .title {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .home .content .title {
+    font-size: 3rem;
+  }
+}
+/*/Media Queries*//*# sourceMappingURL=style.css.map */
