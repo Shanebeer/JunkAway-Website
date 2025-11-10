@@ -1,11 +1,11 @@
 /*Common Elements*/
 @font-face {
   font-family: font;
-  src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+  src: url("/JunkAway-Website/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: hfont;
-  src: url("../fonts/Lilita_One/LilitaOne-Regular.ttf");
+  src: url("/JunkAway-Website/fonts/dream-baser/DreamBaserRegular-YqqxL.ttf");
 }
 * {
   padding: 0;
@@ -41,11 +41,11 @@ section {
   font-weight: bold;
   border-radius: 0.5rem;
   cursor: pointer;
-  background: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
-  color: #fffbef;
+  background: linear-gradient(to right, #c71585, #dc143c, #c71585);
+  color: #f8f8ff;
 }
 .btn:hover {
-  background: #52452d;
+  background: #2b001e;
   transition: 0.2s ease-in-out;
 }
 
@@ -54,10 +54,10 @@ section {
   text-align: center;
   position: relative;
   padding: 7rem;
-  color: #52452d;
+  color: #2b001e;
 }
 .heading span {
-  background: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
+  background: linear-gradient(to right, #c71585, #dc143c, #c71585);
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   -ms-text-fill-color: transparent; /* For IE */
@@ -109,40 +109,43 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fffbef;
+  background-color: #dc143c;
   z-index: 1000;
 }
 .header .logo {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
-  color: #52452d;
+  color: #ffffff;
+  font-family: hfont;
 }
 .header .logo span {
-  color: #d4af37;
+  color: #f8f8ff;
   font-weight: bolder;
+  padding-left: 0.2rem;
+  font-family: hfont;
 }
 .header .logo #icon {
   padding-right: 0.5rem;
   font-size: 2.5rem;
-  color: #d4af37;
+  color: #f8f8ff;
 }
 .header .logo p {
   font-size: 1.5rem;
-  color: #717c7d;
+  color: #f8f8ff;
 }
 .header .navbar a {
   font-size: 1.5rem;
-  color: #52452d;
+  color: #f8f8ff;
   margin: 0 0.7rem;
 }
 .header .navbar a:hover {
-  color: #fffbef;
-  padding: 3.6rem 1rem;
-  background: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
+  color: #dc143c;
+  padding: 3.5rem 1rem;
+  background: #f8f8ff;
 }
 .header .menu-btn {
   font-size: 4rem;
-  color: #52452d;
+  color: #f8f8ff;
   cursor: pointer;
   display: none;
 }
@@ -155,7 +158,7 @@ section {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("../assets/junkaway-homebg1.png") no-repeat;
+  background: url("/JunkAway-Website/assets/junkaway-homebg3.png") no-repeat;
   background-size: cover;
   background-position: top;
 }
@@ -165,7 +168,7 @@ section {
 .home .content .title {
   font-size: 5rem;
   padding: 2rem 0;
-  color: #52452d;
+  color: #2b001e;
 }
 
 /*/Home Section*/
@@ -182,14 +185,14 @@ section {
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
-  color: #52452d;
+  color: #2b001e;
   margin-bottom: 3rem;
 }
 .banner .images img {
   width: 100%;
   height: 25rem;
   object-fit: cover;
-  border: 0.1rem solid #52452d;
+  border: 0.1rem solid #2b001e;
 }
 
 /*/Banner Section*/
@@ -198,7 +201,7 @@ section {
   text-align: center;
   font-size: 4rem;
   font-weight: bold;
-  color: #52452d;
+  color: #2b001e;
   margin-bottom: 3rem;
 }
 .about .choose-us .box-con {
@@ -209,18 +212,18 @@ section {
 .about .choose-us .box-con .box {
   padding: 2rem;
   border-radius: 0.5rem;
-  background: #fffbef;
+  background: #f8f8ff;
   text-align: center;
   overflow: hidden;
 }
 .about .choose-us .box-con .box #icon {
   font-size: 4rem;
-  color: #d4af37;
+  color: #dc143c;
   margin: 2rem 0;
 }
 .about .choose-us .box-con .box h3 {
   font-size: 2rem;
-  color: #52452d;
+  color: #2b001e;
 }
 .about .choose-us .box-con .box p {
   font-size: 1.6rem;
@@ -235,22 +238,31 @@ section {
   flex-wrap: wrap;
   margin: 6rem 0;
 }
-.about .mission .image {
-  flex: 1 1 40rem;
-  width: 40rem;
-  height: 40rem;
+.about .mission .images {
+  flex: 1 1 45rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
 }
-.about .mission .image img {
+.about .mission .images .title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2b001e;
+  margin-bottom: 3rem;
+}
+.about .mission .images img {
   width: 100%;
-  height: 100%;
+  height: 30rem;
   object-fit: cover;
+  border: 0.1rem solid #2b001e;
 }
 .about .mission .content {
   flex: 1 1 40rem;
 }
 .about .mission .content h3 {
   font-size: 2.5rem;
-  color: #52452d;
+  color: #2b001e;
 }
 .about .mission .content p {
   font-size: 1.6rem;
@@ -267,20 +279,20 @@ section {
   gap: 1.5rem;
 }
 .about .areas .box-con .box {
-  background: #fffbef;
+  background: #f8f8ff;
   overflow: hidden;
   border-radius: 0.5rem;
-  border: 0.1rem solid #52452d;
+  border: 0.1rem solid #2b001e;
   text-align: center;
 }
 .about .areas .box-con .box img {
   width: 100%;
-  height: 10rem;
+  height: 15rem;
   object-fit: cover;
 }
 .about .areas .box-con .box h3 {
   font-size: 1.7rem;
-  color: #52452d;
+  color: #2b001e;
   padding: 1rem 0;
 }
 
@@ -290,7 +302,7 @@ section {
   text-align: center;
   font-size: 4rem;
   font-weight: bold;
-  color: #52452d;
+  color: #2b001e;
   margin-bottom: 4rem;
 }
 .work .work-con .images {
@@ -302,7 +314,7 @@ section {
   width: 100%;
   height: 25rem;
   object-fit: cover;
-  border: 0.1rem solid #52452d;
+  border: 0.1rem solid #2b001e;
 }
 
 /*/Work Section*/
@@ -315,23 +327,23 @@ section {
 .contact .icons-con .icons {
   text-align: center;
   padding: 2rem;
-  border: solid 0.2rem #d4af37;
+  border: solid 0.2rem #dc143c;
 }
 .contact .icons-con .icons .icon {
   height: 6rem;
   width: 6rem;
   line-height: 7rem;
-  background-color: #d4af37;
+  background-color: #dc143c;
   border-radius: 50%;
   margin: 0 auto;
 }
 .contact .icons-con .icons .icon #icon {
   font-size: 2.5rem;
-  color: #fffbef;
+  color: #f8f8ff;
 }
 .contact .icons-con .icons h3 {
   font-size: 2rem;
-  color: #52452d;
+  color: #2b001e;
   padding: 1rem 0;
 }
 .contact .icons-con .icons p {
@@ -352,7 +364,7 @@ section {
 
 /*/Contact Us Section*/
 .footer {
-  background-color: #52452d;
+  background-color: #2b001e;
   position: relative;
 }
 .footer .box-con {
@@ -371,26 +383,30 @@ section {
   display: block;
   font-size: 2rem;
   padding: 0.4rem 0;
-  color: #fffbef;
+  color: #f8f8ff;
 }
 .footer .box-con .box:nth-child(2) a:hover {
   text-decoration: underline;
 }
 .footer .box-con .box .logo {
-  font-size: 2.5rem;
-  color: #d4af37;
+  font-size: 2.8rem;
+  color: #dc143c;
   font-weight: bolder;
+  font-family: hfont;
+}
+.footer .box-con .box .logo span {
+  font-family: hfont;
 }
 .footer .box-con .box #icon {
-  color: #d4af37;
+  color: #dc143c;
 }
 .footer .box-con .box h3 {
   font-size: 2.5rem;
-  color: #d4af37;
+  color: #dc143c;
 }
 .footer .box-con .box p {
   font-size: 1.7rem;
-  color: #fffbef;
+  color: #f8f8ff;
   padding: 1rem 0;
 }
 .footer .credit {
@@ -398,12 +414,12 @@ section {
   width: 85%;
   margin: 0 auto;
   padding: 1.4rem 0;
-  border-top: solid 0.2rem #fffbef;
-  color: #fffbef;
+  border-top: solid 0.2rem #f8f8ff;
+  color: #f8f8ff;
   font-size: 2rem;
 }
 .footer .credit span {
-  color: #d4af37;
+  color: #dc143c;
   font-weight: bold;
   font-size: 2.1rem;
 }
@@ -421,7 +437,7 @@ section {
     font-size: 5rem;
   }
   .header .navbar {
-    border-top: solid 0.15rem #52452d;
+    border-top: solid 0.15rem #f8f8ff;
     position: absolute;
     top: 8.75rem;
     left: 0;
@@ -429,7 +445,7 @@ section {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background: #fffbef;
+    background: #2b001e;
   }
   .header .navbar a {
     width: 100%;
@@ -439,8 +455,8 @@ section {
     padding: 0 1rem;
   }
   .header .navbar a:hover {
-    color: #fffbef;
-    background-color: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
+    color: #dc143c;
+    background-color: #f8f8ff;
     padding: 0 2rem;
     border: solid 0.1rem #717c7d;
   }
@@ -449,6 +465,18 @@ section {
   }
   .home .content .title {
     font-size: 3.5rem;
+  }
+  .about .mission .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    padding: 4rem 0;
+  }
+  .about .mission .images img {
+    height: 30rem;
+  }
+  .about .mission .content {
+    text-align: center;
   }
   .banner .images {
     display: grid;
@@ -477,6 +505,14 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1.5rem;
+  }
+  .about .mission .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+  }
+  .about .mission .images img {
+    height: 20rem;
   }
   .work .work-con .images {
     display: grid;
