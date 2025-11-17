@@ -318,6 +318,43 @@ section {
 }
 
 /*/Work Section*/
+/*Reviews Section*/
+.reviews .box-con {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+}
+.reviews .box-con .box {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background: #f8f8ff;
+  text-align: center;
+  overflow: hidden;
+}
+.reviews .box-con .box h3 {
+  font-size: 2rem;
+  color: #dc143c;
+  margin-bottom: 1rem;
+}
+.reviews .box-con .box p {
+  font-size: 1.5rem;
+  color: #717c7d;
+  line-height: 2;
+  padding: 1rem 0;
+}
+.reviews .box-con .box .stars #icon {
+  font-size: 1.6rem;
+  color: gold;
+  padding: 1.5rem 0;
+}
+.reviews .btn.link-btn {
+  margin: 4rem auto 0 auto;
+  display: block;
+  width: 25%;
+}
+
+/*/Reviews Section*/
 /*Contact Us Section*/
 .contact .icons-con {
   display: grid;
